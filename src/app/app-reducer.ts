@@ -38,7 +38,7 @@ export const setAppInitializedAC = (value: boolean) => ({type: 'APP/SET-IS-INITI
 export const initializeAppTC = () => (dispatch: Dispatch) => {
     authAPI.me().then(res => {
         if (res.data.resultCode === 0) {
-
+            console.log(res)
             dispatch(setIsLoggedInAC(true));
         } else {
 
